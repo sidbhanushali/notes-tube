@@ -14,9 +14,8 @@ const saveNote = (note, res) => {
 // get request to get notes for a particular user
 router.get("/", (req, res) => {
   noteModel.find({author: req.username.username})
-    .then(notes => {
-      res.json(notes);
-    }).catch(err => res.json({msg: "Could not find notes for that user."}));
+    .then(notes => res.json(notes) )
+    .catch(err => res.json({msg: "Could not find notes for that user."}));
 });
 
 // create a note for a user.
