@@ -30,6 +30,7 @@ function authMiddleware(req, res, next) {
       return;
     }
 
+    
     try {
         const decoded = jwt.verify(JSON.parse(token), process.env.SECRET);
         req.username = decoded;

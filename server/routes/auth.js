@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 const userModel = require('../models/user')
-const user = require('../models/user')
+
 
 
 router.post("/", async (req,res) => {
@@ -65,3 +65,5 @@ router.post("/login", (req, res) => {
       });
   });
   
+
+  module.exports = router;
